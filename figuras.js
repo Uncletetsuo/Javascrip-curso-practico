@@ -115,3 +115,40 @@ function calcularAreaCuadrado() {
     alert(area)
 
 }
+// interaccion en HTML para el triangulo 
+function calcularPerimetroTriangulo() {
+    const Ladotriangulo = document.getElementById("inputLadoTriangulo");
+    const baseTriangulo = document.getElementById("inputBaseTriangulo");
+
+    const valorLado = Number(Ladotriangulo.value);
+    const valorBase = Number(baseTriangulo.value);
+
+    const perimetro = perimetroTriangulo(valorLado, valorLado, valorBase);
+    alert(perimetro)
+}
+function calcularAreaTriangulo() {
+    const baseTriangulo = document.getElementById("inputBaseTriangulo");
+    const alturaTriangulo = document.getElementById("inputAlturaDelTriangulo");
+
+    const valorBase = Number(baseTriangulo.value);
+    const valorAltura = Number(alturaTriangulo.value);
+
+    const area = areaTriangulo(valorBase, valorAltura);
+    alert(area)
+}
+
+// interaccion en HTML con el circulo 
+function calcularPerimetroCirculo () {
+    const radio = document.getElementById("inputCirculo");
+    const valorRadio = Number(radio.value);
+
+    const perimetro = perimetroCirculo(valorRadio);
+    alert(perimetro);
+}
+function calcularAreaCirculo() {
+    const radio = document.getElementById("inputCirculo");
+    const valorRadio = Number(radio.value);
+
+    const aera = areaCirculo(valorRadio);
+    alert(aera);
+}

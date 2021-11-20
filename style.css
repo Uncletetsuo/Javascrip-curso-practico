@@ -11,8 +11,7 @@ body {
     height: 100vh;
 }
 main {
-    /* background-image: url(https://cdn.shopify.com/s/files/1/2198/0277/products/2001080_0bd53712-9b19-4f4e-8e05-62ce5c3962c3_2400x.jpg?v=1571716494); */
-    background-image: url(https://i.pinimg.com/736x/58/de/ef/58deeff5cce2430004e1c466e07f7e2e.jpg);
+    background-image: url(./Background-calculator-small.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
