@@ -1,3 +1,4 @@
+/* css de 320px a 600px */
 * {
 box-sizing: border-box;
 margin: 0;
@@ -5,14 +6,127 @@ padding: 0;
 }
 html {
     font-size: 62.5%;
+    font-family: sans-serif;
 }
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-}
-main {
+    min-width: 320px;
     background-image: url(./Background-calculator-small.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     background-size: cover;
+}
+header {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: rgb(0, 14, 141);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: rgb(128, 255, 0);
+    font-family: sans-serif;
+}
+main {
+    display: block;
+    width: 100%;
+}
+
+.grid-container {
+    width: 100%;
+    padding: 0 50px 40px;
+}
+
+.card-main-container {
+    display: grid;
+    width: 100%;
+    padding-top: 25px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+form.main-math-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "A A A"
+    "B1 B2 B3"
+    "C C C"
+    "D1 D2 D3"
+    "E1 E2 E3";
+    background-image: radial-gradient(circle, #003a92, #31318b, #472783, #571979, #64006d);
+    border-radius: 10px;
+    min-height: 250px;
+    border: 1px solid black;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+form.main-math-container label {
+    grid-area: A;
+    display: flex;
+    place-self: center;
+    font-size: 1.3rem;
+    text-align: center;
+    color: rgb(128, 255, 0);
+}
+form.main-math-container .perimeter {
+    grid-area: E1;
+}
+form.main-math-container .area {
+    grid-area: E3;
+}
+form.main-math-container .buttonskin {
+    border-radius: 5px;
+    width: 50px;
+    min-width: 50px;
+    height: 35px;
+    display: flex;
+    place-self: center;
+    justify-content: center;
+}
+form.main-math-container .buttonskin.perimeter {
+    width: fit-content;
+}
+
+
+/* Dentro de la grid (Cuadrado y circulo) */
+
+form.cuadrado-math-container input , 
+form.circulo-math-container input {
+    grid-area: C;
+    height: 30px;
+    width: 200px;
+    place-self: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Dentro de la grid del triangulo */
+
+.triangulo-math-container input {
+    width: 80%;
+    min-width: 50px;
+    height: 30px;
+    display: flex;
+    place-self: center;
+}
+.triangulo-math-container input.triangulo1 {
+    grid-area: B1;
+}
+.triangulo-math-container input.triangulo2
+{
+    grid-area: B3;
+}
+.triangulo-math-container input.triangulo3
+{
+    grid-area: D1;
+}
+.triangulo-math-container input.trianguloh {
+    grid-area: D3;
+}
+.triangulo-math-container .altura {
+    grid-area: E2;
 }

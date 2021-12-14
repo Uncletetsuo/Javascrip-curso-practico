@@ -16,46 +16,43 @@
     </header>
 
     <main class="home-main-background">
+    <section class="grid-container">
     <section class="card-main-container">
-        <Article class="main-math-container">
-        <h2>Calcula el area y el perimetro de un cuadrado</h2>
-        <form action="">
+    <Article class="flex-container">
+        <form action="" class="main-math-container cuadrado-math-container">
             <label for="inputCuadrado">
                 Escribir Cuanto mide cada lado de tu cuadrado:
             </label>
-            <input type="number" class="" id="inputCuadrado">
-            <button type="button" onclick="calcularPerimetroCuadrado()"> Calcular el perimetro </button>
-            <button type="button" onclick="calcularAreaCuadrado()">  Calcular el area</button>
+            <input type="number" class="" id="inputCuadrado" placeholder="Lado del cuadrado">
+            <button class="perimeter buttonskin" type="button" onclick="calcularPerimetroCuadrado()"> perimetro </button>
+            <button class="area buttonskin" type="button" onclick="calcularAreaCuadrado()">  area</button>
         </form>
     </article>
-    </section>
-    <section class="card-main-container">
-        <Article class="main-math-container">
-        <h2>Calcula el area y el perimetro de un Triangulo</h2>
-        <form action="">
+    <Article class="flex-container">
+        <form action="" class="main-math-container triangulo-math-container">
             <label for="inputLadoTriangulo inputAlturaDelTriangulo inputBaseTriangulo">
                 Escribir Cuanto mide cada lado y base del triangulo:
             </label>
-            <input type="number" class="" id="inputLadoTriangulo" placeholder="Lados del triangulo">
-            <input type="number" class="" id="inputBaseTriangulo" placeholder="Base del triangulo">
-            <input type="number" class="" id="inputAlturaDelTriangulo" placeholder=" del triangulo">
-            <button type="button" onclick="calcularPerimetroTriangulo()"> Calcular el perimetro </button>
-            <button type="button" onclick="calcularAreaTriangulo()">  Calcular el area</button>
+            <input type="number" class="triangulo1" id="inputLadoATriangulo" placeholder="Lado A del triangulo">
+            <input type="number" class="triangulo2" id="inputLadoBTriangulo" placeholder="Lado B del triangulo">
+            <input type="number" class="triangulo3" id="inputBaseTriangulo" placeholder="Base del triangulo">
+            <input type="number" class="trianguloh" id="inputAlturaDelTriangulo" placeholder="Altura del triangulo">
+            <button class="perimeter buttonskin" type="button" onclick="calcularPerimetroTriangulo()">perimetro </button>
+            <button class="area buttonskin" type="button" onclick="calcularAreaTriangulo()">  area</button>
+            <button class="altura buttonskin" type="button" onclick="calcularAlturaTriangulo()">  altura</button>
         </form>
     </Article>
-    </section>
-    <section class="card-main-container">
-        <Article class="main-math-container">
-        <h2>Calcula el area y el perimetro de un Circulo </h2>
-        <form action="">
+    <Article class="flex-container">
+        <form action="" class="main-math-container circulo-math-container">
             <label for="inputCirculo">
                 Escribir Cuanto mide cada lado de tu cuadrado:
             </label>
             <input type="number" class="" id="inputCirculo" placeholder="Radio del circulo">
-            <button type="button" onclick="calcularPerimetroCirculo()"> Calcular el perimetro </button>
-            <button type="button" onclick="calcularAreaCirculo()">  Calcular el area</button>
+            <button class="perimeter buttonskin" type="button" onclick="calcularPerimetroCirculo()"> perimetro </button>
+            <button class="area buttonskin" type="button" onclick="calcularAreaCirculo()">  area</button>
         </form>
         </article>
+    </section>
     </section>
     </main>
     <script src="./figuras.js"></script>
