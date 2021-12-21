@@ -30,7 +30,7 @@ const lista2 = [
     100,
     5,
     200,
-    300,
+    400,
     500,
     2,
     10000000,
@@ -58,7 +58,7 @@ let mediana;
 
 function calcularMediana(userList){
 
-    const mitadLista = parseInt(userList.length / 2);
+    let mitadLista = parseInt(userList.length / 2);
 
     if (esPar(userList.length)) {
 const elemento1 = userList[mitadLista];
@@ -67,11 +67,12 @@ const elemento2 = userList[mitadLista - 1];
 const promedioElemento1y2 = calcularMediaAritmetica([
     elemento1,
     elemento2,
-]);
 
-mediana = promedioElemento1y2;
+]);
+ return mediana = promedioElemento1y2;
+
 }
 else {
- mediana = userList[mitadLista]
+ return mediana = userList[mitadLista]
 }
 }
