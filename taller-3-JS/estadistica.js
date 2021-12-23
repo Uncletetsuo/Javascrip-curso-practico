@@ -76,3 +76,65 @@ else {
  return mediana = userList[mitadLista]
 }
 }
+
+// vamos con la moda 
+//este es el array que nos deben de dar, tanto el usuario o una lista definida
+const lista3 = [
+    1,
+    2,
+    3,
+    1,
+    2,
+    3,
+    4,
+    2,
+    2,
+    2,
+    1, 
+];
+
+// aqui estamos creando una const con un objeto vacio 
+const lista3Count = {};
+
+// aqui estamos integrando el metodo array.map() que construye toda un nuevo array apartir de un anterior, y como se nota estamos usando 
+// el objeto vacio de lista3Count para llenarla con los resultados de lo que seria el ordenamiento de lista3
+// esta funcion anonima lo que hace es que si se repite 
+lista3.map(
+    function (i){
+        if (lista3Count[i]){
+            lista3Count[i] += 1;
+        }
+        else {
+            lista3Count[i] = 1;
+        }
+    }
+);
+
+const lista3Array = Object.entries(lista3Count).sort(
+    function (a, b) {
+        return a[1] - b[1];
+    }
+)
+
+function calcularModa (userList) {
+     let userListCount = {};
+
+     userList.map(
+         function (i) {
+             if (userListCount[i]) {
+                 userListCount[i] += 1;
+             }
+             else {
+                userListCount[i] = 1;
+             }
+         }
+     );
+     let userListArray = Object.entries (userListCount).sort(
+         function (a, b) {
+             return a[1] - b[1];
+         }
+     );
+    const moda = userListArray[userListArray.length - 1]
+
+    return moda
+}
