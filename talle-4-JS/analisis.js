@@ -37,22 +37,21 @@ const sumaLista = userList.reduce(
         return parseInt(valorAcumulado+ nuevoElemento);
     }
 )
-// inicializamos la variable asginandole la division de la suma total sobre el numero de datos... ya sabes la formula del promedio, pero solo asi entiende este lenguaje de programacion
-const promedioLista = sumaLista / userList.length;
-//que nos regrese el valor que 
-return promedioLista;
+// return la formula del promedio, ahorrando una linea de codigo y una variable,  solo asi entiende este lenguaje de programacion
+return sumaLista / userList.length;
 
 }
 
-
+// inicializamos una funcion para calcular la mediana, se puede hacer mas corta? si, pero todavia no conozco lo suficiente como para saber como funciona
 function calcularMediana(userList){
-   
+// inicializamos una variable, asignandole un numero entero de lo que seria la mitad del length
     let mitadLista = parseInt(userList.length / 2);
-
+// te acuerdas de la funcion para saber si es par o no es par? aqui viene a funcionar con el metodo length de nuetro parametro
     if (esPar(userList.length)) {
+// si es par utilizamos dos elementos y esos dos elementos les sacamos un promedio
 const elemento1 = userList[mitadLista];
 const elemento2 = userList[mitadLista - 1];
-
+// aqui 
 const promedioElemento1y2 = calcularMediaAritmetica([
     elemento1,
     elemento2,
@@ -65,3 +64,16 @@ else {
  return mediana = userList[mitadLista]
 }
 }
+
+//mediana del top 10%
+ const spliceStart = (salariosColombiaSorted.length * (1 - .1));
+ const spliceCount = salariosColombiaSorted.length - spliceStart;
+
+ let salariosTop10 = salariosColombiaSorted.slice(spliceStart, salariosColombiaSorted.length);
+
+ const medianaSalariosTop10 = calcularMediana(salariosTop10);
+
+ console.log(
+     calcularMediana(salariosColombiaSorted),
+     medianaSalariosTop10
+ )
